@@ -1,0 +1,16 @@
+svn co path_url --depth immediates
+svn add file
+svn ci -m"LogMessage" file
+svn up -r version
+svn info
+svn st [?:不在控制中；M：本地修改了；C:冲突；A：准备加入版本；K：被锁定]
+svn st -v
+svn del file
+svn log -l 10
+svn diff file
+svn diff -r version:anoher_version file
+svn list
+svn resolved
+
+svn up --set-depth=exclude
+svn up --set-depth infinity
