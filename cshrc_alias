@@ -1,0 +1,8 @@
+alias g gvim
+alias update 'rm -rf rtl;svn up gen-reg rtl scripts'
+alias setback 'setenv DISPLAY `cat ~l00291985/.display`;make verdi&'
+alias cd2 cd ../..
+alias cd3 cd ../../..
+alias cd4 cd ../../../..
+alias cd5 cd ../../../../..
+alias getxs "bsub -G LSF_NAME -q short xterm &"
