@@ -8,9 +8,10 @@ svn st -v
 svn del file
 svn log -l 10
 svn diff file
-svn diff -r version:anoher_version file
+svn diff -r version:another_version file
 svn list
 svn resolved
+svn export file -version 这个命令可以export一个版本为version指定文件，然后可以再将这个文件commit上传，常用语版本回退
 
 svn up --set-depth=exclude
 svn up --set-depth infinity
