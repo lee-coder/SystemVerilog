@@ -1,0 +1,14 @@
+`define GET_ARG_INT(para,init_val) \
+    begin \
+      uvm_cmdline_processor cmdline_proc = uvm_cmdline_processor::get_inst(); \
+      string ``para``_string = ""; \
+      int rc = cmdline_proc.get_arg_value("``para``=", ``para``_string); \
+      para = init_val; \
+      if(``para``_string != "") begin \
+        para = ``para``_string.atoi(); \
+        `uvm_info(get_type_name(), $psprintf("[uvm_cmdline_processor int : para] ``para``_string / ``para`` is %0s / %0d", ``para``string, para), UVM_MEDIUM); \
+      end \
+      else begin \
+        `uvm_info(get_type_name(), $psprintf("[uvm_cmdline_processor int : para] ``para`` no specific, init value is %0d", init_val), UVM_MEDIUM); \
+      end \
+    end \
